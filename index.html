@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            :root {
+                /* Spacing */
+                --scale-2:  0.125rem; /* 2px */
+                --scale-4:  0.25rem; /* 4px */
+                --scale-8:  0.50rem; /* 8px */
+                --scale-12: 0.75rem; /* 12px */
+                --scale-16: 1.00rem; /* 16px */
+                --scale-20: 1.25rem; /* 20px */
+                --scale-24: 1.50rem; /* 24px */
+                --scale-28: 1.75rem; /* 28px */
+                --scale-32: 2rem;    /* 32px */
+                --scale-40: 2.5rem;  /* 40px */
+                --scale-48: 3rem;    /* 48px */
+
+                /* Text & icons */
+                --ui-text-rgb:     0, 0, 0;
+                --ui-text-high:    rgba(var(--ui-text-rgb), 0.94);  /* Primary text */
+                --ui-text-medium:  rgba(var(--ui-text-rgb), 0.72);  /* Secondary text */
+                --ui-text-low:     rgba(var(--ui-text-rgb), 0.48);  /* Disabled, placeholder */
+
+                --ui-surface-hue: 32deg;
+  
+                /* UI surface, backgrounds, etc */
+                --ui-surface-highest: hsl(var(--ui-surface-hue), 28%, 98%);    /* lighter overlay on dark mode */
+                --ui-surface-high:    hsl(var(--ui-surface-hue), 24%, 96%);    /* Default page background */
+                --ui-surface-medium:  hsl(var(--ui-surface-hue), 20%, 92%);    /* Alternate background, well */
+                --ui-surface-low:     hsl(var(--ui-surface-hue), 14%, 90%);    /* Inset card, well */
+                
+                /* Font stacks */
+                --ui-fontStack-sansSerif: sans-serif;
+                --ui-fontStack-serif:     'Georgia', 'Roboto Slab', serif;
+                --ui-fontStack-condensed: 'IBM Plex Sans Condensed', sans-serif;
+
+                /* Accent color */
+                --ui-accent: #574AF2;
+
+                /* Color scheme preferences */
+                color-scheme: light dark;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --ui-text-rgb: 255, 255, 255;
+                    --ui-accent: #b1aaff;
+                    --ui-surface-hue: 250deg;
+                    --ui-surface-highest: hsl(var(--ui-surface-hue), 28%, 20%);    /* lighter overlay on dark mode */
+                    --ui-surface-high:    hsl(var(--ui-surface-hue), 24%, 18%);    /* Default page background */
+                    --ui-surface-medium:  hsl(var(--ui-surface-hue), 20%, 12%);    /* Alternate background, well */
+                    --ui-surface-low:     hsl(var(--ui-surface-hue), 14%, 10%);    /* Inset card, well */
+                }
+            }
+
+            body {
+                color: var(--ui-text-high);
+                background: var(--ui-surface-high);
+                margin: var(--scale-40);
+                font-family: var(--ui-fontStack-serif);
+                /*font-size: 1.25rem;*/
+                line-height: 1.5;
+            }
+
+            p {
+                max-width: 55ch;
+                margin-block: var(--scale-16);
+            }
+
+            /* Anchors */
+            a {
+                /*font-family: var(--ui-fontStack-sansSerif);
+                font-size: 0.9em;*/
+                color: var(--ui-accent);
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+
+            /* strong */
+            h1 {
+                font-size: inherit;
+                font-family: var(--ui-fontStack-sansSerif);
+                margin-block: var(--scale-24) 0;
+            }
+            h1 + p {
+                margin-block-start: var(--scale-8);
+            }
+        </style>
+    </head>
+    <body>
+        <p>Oh, hello. This is Vinicius here.</p>
+
+        <h1>Areas I’m currently interested in</h1>
+        <p>Computer-human interfaces, user experience, web technologies, software development, game design, human history, linguistics, urbanism, typography, photography, drawing, and much more.</p>
+        
+        <h1>Elsewhere</h1>
+        <p>Find some of my things on <a href="https://github.com/vdepizzol" class="external">GitHub</a>, <a href="https://adxlv.co" class="external">ADXLV</a>, or <a href="https://flickr.com/vdepizzol" class="external">Flickr</a>.</p>
+        
+        <h1>Contact</h1>
+        <p>
+            You can reach me via email via <a href='mai&#108;to&#58;&#109;e&#64;%76&#105;nic&#105;%75&#115;%6&#52;%65&#37;&#55;0i%7A&#37;&#55;&#65;%6F&#37;6&#67;&#46;c&#111;m'>m&#101;&#64;v&#105;n&#105;&#99;iusdepizz&#111;&#108;&#46;co&#109;</a>.<br />
+            <em style="color: var(--ui-text-medium)">P.S. I’m not currently looking for a new employer.</em>
+        </p>
+    </body>
+</html>
