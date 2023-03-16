@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style type="text/css">
             :root {
-                /* Spacing */
+
+                /* Hello, stranger. */
+
+                /* Spacing helpers */
                 --scale-2:  0.125rem; /* 2px */
                 --scale-4:  0.25rem;  /* 4px */
                 --scale-8:  0.50rem;  /* 8px */
@@ -35,8 +38,7 @@
                 
                 /* Font stacks */
                 --ui-fontStack-sansSerif: sans-serif;
-                --ui-fontStack-serif:     'Georgia', 'Roboto Slab', serif;
-                --ui-fontStack-condensed: 'IBM Plex Sans Condensed', sans-serif;
+                --ui-fontStack-serif:     serif;
 
                 /* Accent color */
                 --ui-accent: #574AF2;
@@ -50,11 +52,15 @@
                     --ui-text-rgb: 255, 255, 255;
                     --ui-accent: #b1aaff;
                     --ui-surface-hue: 250deg;
-                    --ui-surface-highest: hsl(var(--ui-surface-hue), 28%, 20%);    /* lighter overlay on dark mode */
-                    --ui-surface-high:    hsl(var(--ui-surface-hue), 24%, 18%);    /* Default page background */
-                    --ui-surface-medium:  hsl(var(--ui-surface-hue), 20%, 12%);    /* Alternate background, well */
-                    --ui-surface-low:     hsl(var(--ui-surface-hue), 14%, 10%);    /* Inset card, well */
+                    --ui-surface-highest: hsl(var(--ui-surface-hue), 28%, 20%);
+                    --ui-surface-high:    hsl(var(--ui-surface-hue), 24%, 18%);
+                    --ui-surface-medium:  hsl(var(--ui-surface-hue), 20%, 12%);
+                    --ui-surface-low:     hsl(var(--ui-surface-hue), 14%, 10%);
                 }
+            }
+
+            :root {
+                font-size: 120%;
             }
 
             body {
@@ -66,6 +72,10 @@
             }
 
             @media (max-width: 544px) {
+                :root {
+                    font-size: 100%;
+                }
+                
                 body {
                     margin: var(--scale-16);
                 }
@@ -74,9 +84,6 @@
             /* Anchors */
             a {
                 color: var(--ui-accent);
-                text-decoration: none;
-            }
-            a:hover {
                 text-decoration: underline;
             }
 
@@ -86,9 +93,19 @@
                 font-family: var(--ui-fontStack-sansSerif);
                 margin-block: var(--scale-24) 0;
             }
-            h1 + p {
-                margin-block-start: var(--scale-8);
+            h1 + :is(p, ul, ol, dl) {
+                margin-block-start: var(--scale-4);
             }
+
+            h2 {
+                font-size: inherit;
+                font-family: var(--ui-fontStack-sansSerif);
+                margin-block: var(--scale-24) 0;
+            }
+            h2 + :is(p, ul, ol, dl) {
+                margin-block-start: var(--scale-4);
+            }
+
             p {
                 max-width: 30rem;
                 margin-block: var(--scale-16);
@@ -96,18 +113,25 @@
         </style>
     </head>
     <body>
-        <p>Oh, hello. This is Vinicius here.</p>
+        <h1>Vinicius Depizzol</h1>
+        <p>Human being.</p>
 
-        <h1>Areas I’m currently interested in</h1>
-        <p>Computer-human interfaces, user experience, web technologies, software development, game design, human history, linguistics, urbanism, typography, photography, drawing, and much more.</p>
+        <h2>Current interests</h2>
+        <p>Computer-human interfaces, user experience, web technologies, software development, open source, game design, human history, linguistics, urbanism, typography, photography, drawing.</p>
+
+        <h2>Current tools</h2>
+        <ul>
+            <li>VSCodium, Terminal, Git, Linux</li>
+            <li>CSS, HTML, Javascript</li>
+            <li>Figma, Inkscape, Blender, Gimp</li>
+            <li>Godot, Aseprite, Krita, PureRef</li>
+            <li>RawTherapee, Adobe Lightroom, Davinci Resolve</li>
+            <li>Pen, pencil, paper</li>
+        </ul>
         
-        <h1>Elsewhere</h1>
-        <p>Find some of my things on <a href="https://github.com/vdepizzol" class="external">GitHub</a>, <a href="https://adxlv.co" class="external">ADXLV</a>, or <a href="https://flickr.com/vdepizzol" class="external">Flickr</a>.</p>
-        
-        <h1>Contact</h1>
+        <h2>Say hi</h2>
         <p>
-            You can reach me via <a href='mai&#108;to&#58;&#109;e&#64;%76&#105;nic&#105;%75&#115;%6&#52;%65&#37;&#55;0i%7A&#37;&#55;&#65;%6F&#37;6&#67;&#46;c&#111;m'>m&#101;&#64;v&#105;n&#105;&#99;iusdepizz&#111;&#108;&#46;co&#109;</a>.<br />
-            <em style="color: var(--ui-text-medium)">P.S. I’m currently not looking for a new employer.</em>
+            <a href='mai&#108;to&#58;&#109;e&#64;%76&#105;nic&#105;%75&#115;%6&#52;%65&#37;&#55;0i%7A&#37;&#55;&#65;%6F&#37;6&#67;&#46;c&#111;m'>m&#101;&#64;v&#105;n&#105;&#99;iusdepizz&#111;&#108;&#46;co&#109;</a>
         </p>
     </body>
 </html>
